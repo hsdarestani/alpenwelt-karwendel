@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1d211d">
+<meta name="description" content="Alpine Chalet Wallgau. Vier exklusive 5 Sterne DTV Feriendomizile in der Alpenwelt Karwendel. Informationen, Buchung, Bewertungen und Kontakt.">
+<title>Alpine Chalet | Wallgau</title>
+<style>
+:root{
+  --forest:#1d211d;
+  --forest2:#2e372f;
+  --wood:#9e795f;
+  --sand:#e9dfd2;
+  --cream:#f7f4ef;
+  --blue:#006796;
+  --white:#fff;
+  --shadow:0 24px 60px rgba(35,31,25,.18);
+  --soft:0 12px 30px rgba(35,31,25,.10)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:#2b2a27;
+  background:
+    radial-gradient(circle at 10% 4%,rgba(158,121,95,.14),transparent 27%),
+    radial-gradient(circle at 92% 15%,rgba(0,103,150,.10),transparent 24%),
+    linear-gradient(160deg,#faf8f5,#f1ede6 52%,#faf9f6);
+  overflow-x:hidden
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.22;
+  background-image:linear-gradient(rgba(63,54,43,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(63,54,43,.04) 1px,transparent 1px);
+  background-size:32px 32px;
+  mask-image:linear-gradient(to bottom,black,transparent 65%)
+}
+.shell{width:min(100%,700px);margin:0 auto;padding:18px 14px calc(28px + env(safe-area-inset-bottom))}
+.hero{
+  position:relative;
+  overflow:hidden;
+  min-height:590px;
+  border-radius:38px;
+  box-shadow:var(--shadow);
+  color:#fff;
+  isolation:isolate;
+  background:#1b1e1a
+}
+.heroBg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3}
+.hero:before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:linear-gradient(180deg,rgba(14,17,14,.28) 0%,rgba(14,17,14,.30) 30%,rgba(14,17,14,.78) 72%,rgba(14,17,14,.94) 100%)
+}
+.hero:after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(circle at 80% 8%,rgba(255,255,255,.18),transparent 24%),linear-gradient(140deg,rgba(0,103,150,.08),transparent 40%)
+}
+.heroInner{padding:22px}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.77)}
+.location{display:flex;align-items:center;gap:8px}.location i{width:28px;height:2px;background:linear-gradient(90deg,#fff,var(--wood));border-radius:99px}
+.rating{padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(12px)}
+.logoCard{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-top:26px;
+  padding:13px 16px;
+  border-radius:21px;
+  background:rgba(255,255,255,.91);
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+  max-width:82%
+}
+.logoCard img{display:block;width:min(100%,330px);max-height:108px;object-fit:contain}
+.heroCopy{position:absolute;left:22px;right:22px;bottom:22px}
+.kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#e9cfb7;font-weight:800;margin-bottom:7px}
+h1{margin:0 0 9px;font-size:clamp(33px,8vw,48px);line-height:.98;letter-spacing:-.045em}
+.heroSub{margin:0;max-width:560px;color:rgba(255,255,255,.78);font-size:14px;line-height:1.55}
+.heroMeta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:17px}
+.meta{
+  min-height:73px;padding:12px 13px;border-radius:19px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.09);
+  backdrop-filter:blur(12px)
+}
+.meta small{display:block;color:#e9cfb7;font-size:9px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:5px}
+.meta strong{font-size:12px;line-height:1.45;color:#fff}
+.intro{text-align:center;padding:26px 8px 12px}.intro h2{margin:0;font-size:24px;letter-spacing:-.03em}.intro p{margin:8px auto 0;max-width:540px;color:#706b63;font-size:13px;line-height:1.6}
+.links{display:grid;gap:12px}
+.link{
+  position:relative;
+  display:grid;grid-template-columns:52px 1fr 26px;gap:14px;align-items:center;
+  min-height:80px;padding:13px 15px;border-radius:24px;text-decoration:none;color:#2d2c29;
+  background:rgba(255,255,255,.91);border:1px solid rgba(76,63,49,.08);box-shadow:var(--soft);
+  transition:transform .22s ease,box-shadow .22s ease
+}
+.link:active{transform:scale(.985)}
+@media(hover:hover){.link:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(35,31,25,.15)}}
+.link.primary{
+  color:#fff;border:0;
+  background:radial-gradient(circle at 12% 10%,rgba(255,255,255,.15),transparent 24%),linear-gradient(110deg,#382d25,#795b47 55%,#b08b6f)
+}
+.icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:#f3eee7;color:#795b47}.icon svg{width:24px;height:24px}
+.primary .icon{background:rgba(255,255,255,.15);color:#fff}
+.map .icon{background:#eaf5fb;color:var(--blue)}
+.web .icon{background:linear-gradient(145deg,#1e231f,#405046);color:#fff}
+.review .icon{background:#fff6df;color:#b58b22}
+.fewo .icon{background:#eef1ff;color:#5b5cc8}
+.linkText strong{display:block;font-size:15px;line-height:1.22;margin-bottom:4px}.linkText span{display:block;font-size:12px;color:#746e66;line-height:1.3}.primary .linkText span{color:rgba(255,255,255,.74)}.arrow{font-size:23px}
+.label{display:flex;align-items:center;gap:11px;margin:27px 8px 12px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8a8178;font-weight:800}.label:before,.label:after{content:"";height:1px;background:#ddd4ca;flex:1}
+.host{
+  overflow:hidden;border-radius:30px;background:linear-gradient(145deg,#242922,#343d34);color:#fff;box-shadow:var(--soft);padding:20px
+}
+.hostTop{display:flex;align-items:center;gap:14px}.hostIcon{width:54px;height:54px;border-radius:18px;background:linear-gradient(145deg,#a78368,#d2b298);display:grid;place-items:center;font-size:25px}.host h3{margin:0 0 4px;font-size:18px}.host p{margin:0;color:rgba(255,255,255,.69);font-size:12px;line-height:1.5}
+.hostNote{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;line-height:1.58;color:rgba(255,255,255,.78)}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:145px 145px;gap:10px}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;border-radius:22px;box-shadow:var(--soft)}
+.gallery .big{grid-row:1/3}
+.card{border-radius:30px;background:rgba(255,255,255,.90);border:1px solid rgba(76,63,49,.08);box-shadow:var(--soft);padding:19px}
+.row{display:grid;grid-template-columns:38px 1fr;gap:11px;align-items:start;padding:10px 2px}.row+.row{border-top:1px solid #eee7df}
+.mini{width:36px;height:36px;border-radius:12px;background:#f4efe8;color:#795b47;display:grid;place-items:center}.mini svg{width:18px;height:18px}
+.row small{display:block;color:#948a7f;font-size:9px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}.row a,.row span{color:#2d2c29;text-decoration:none;font-size:13px;line-height:1.5}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.action{min-height:48px;border-radius:16px;text-decoration:none;display:flex;align-items:center;justify-content:center;border:1px solid #e1d9d0;color:#2d2c29;font-weight:720;font-size:13px;background:#fff}.action.dark{background:#292e29;color:#fff;border-color:#292e29}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px}.chip{padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.85);border:1px solid #e4dbd2;color:#655d55;font-size:11px;font-weight:670;box-shadow:0 7px 18px rgba(35,31,25,.06)}
+.units{display:grid;grid-template-columns:1fr 1fr;gap:10px}.unit{padding:15px;border-radius:22px;background:rgba(255,255,255,.9);border:1px solid #e5ddd4;box-shadow:0 8px 22px rgba(35,31,25,.07)}.unit small{display:block;color:#9e795f;text-transform:uppercase;letter-spacing:.11em;font-size:9px;font-weight:800}.unit strong{display:block;margin-top:5px;font-size:17px}.unit span{display:block;margin-top:3px;color:#776f67;font-size:11px;line-height:1.4}
+footer{text-align:center;color:#968c82;padding:25px 8px 4px;font-size:10px;line-height:1.6}footer b{color:#6e655d}
+@media(max-width:410px){
+  .shell{padding-left:10px;padding-right:10px}.hero{min-height:620px}.heroInner{padding:18px}.heroCopy{left:18px;right:18px;bottom:18px}.logoCard{max-width:88%}.heroMeta{grid-template-columns:1fr}.gallery{grid-template-rows:125px 125px}.units{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="shell">
+<section class="hero">
+<img class="heroBg" src="https://www.alpenwelt-karwendel.de/images/spwhcw9vu04-/chalet-1-wohn-esszimmer.jpg" alt="Wohnbereich im Alpine Chalet">
+<div class="heroInner">
+<div class="topline"><div class="location"><i></i><span>Wallgau, Bayern</span></div><span class="rating">5 Sterne DTV</span></div>
+<div class="logoCard"><img src="https://www.alpenwelt-karwendel.de/images/en0mtv0cfkq-/logo.jpg" alt="Alpine Chalet Logo"></div>
+</div>
+<div class="heroCopy">
+<div class="kicker">Natürlich schöner Urlaub</div>
+<h1>Alpine Chalet</h1>
+<p class="heroSub">Vier exklusive Feriendomizile im Herzen von Wallgau. Alpine Gemütlichkeit, Wellness und Bergblick in der Alpenwelt Karwendel.</p>
+<div class="heroMeta">
+<div class="meta"><small>Standort</small><strong>Mittenwalder Str. 17<br>82499 Wallgau</strong></div>
+<div class="meta"><small>Gastgeber</small><strong>Jana und Andreas Grimm<br>Herzlich willkommen</strong></div>
+</div>
+</div>
+</section>
+
+<section class="intro">
+<h2>Alles für Ihren Aufenthalt</h2>
+<p>Verfügbarkeit prüfen, Bewertungen lesen, die Chalets entdecken und direkt Kontakt aufnehmen.</p>
+</section>
+
+<nav class="links" aria-label="Wichtige Links">
+<a class="link primary" href="https://www.alpenwelt-karwendel.de/a-alpine-chalet" target="_blank" rel="noopener">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="15" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 3.5v4M17 3.5v4M3.5 10h17" stroke="currentColor" stroke-width="1.8"/></svg></span>
+<span class="linkText"><strong>Verfügbarkeit und Buchen</strong><span>Direkt über Alpenwelt Karwendel</span></span><span class="arrow">›</span>
+</a>
+
+<a class="link web" href="https://www.alpine-chalet.de/" target="_blank" rel="noopener">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8"/><path d="M3.8 12h16.4M12 3.5c2.2 2.3 3.4 5.1 3.4 8.5S14.2 18.2 12 20.5c-2.2-2.3-3.4-5.1-3.4-8.5S9.8 5.8 12 3.5Z" stroke="currentColor" stroke-width="1.6"/></svg></span>
+<span class="linkText"><strong>Website</strong><span>Chalets, Service, Preise und Informationen</span></span><span class="arrow">›</span>
+</a>
+
+<a class="link map" href="https://www.google.com/maps/search/?api=1&query=Alpine%20Chalet%20Mittenwalder%20Str.%2017%2082499%20Wallgau" target="_blank" rel="noopener">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s6.5-5.2 6.5-11.5a6.5 6.5 0 1 0-13 0C5.5 15.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg></span>
+<span class="linkText"><strong>Google Maps und Bewertungen</strong><span>Anfahrt und Gästebewertungen</span></span><span class="arrow">›</span>
+</a>
+
+<a class="link fewo" href="https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p5301721" target="_blank" rel="noopener">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5V20H4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 20v-5h6v5" stroke="currentColor" stroke-width="1.8"/></svg></span>
+<span class="linkText"><strong>FeWo direkt</strong><span>Unterkunft, Ausstattung und Gästestimmen</span></span><span class="arrow">›</span>
+</a>
+</nav>
+
+<div class="label">Ihre Gastgeber</div>
+<section class="host">
+<div class="hostTop">
+<div class="hostIcon">♡</div>
+<div><h3>Jana und Andreas Grimm</h3><p>Gastgeber mit Leidenschaft für Berge, Reisen und gemeinsame Familienzeit.</p></div>
+</div>
+<div class="hostNote">Das Alpine Chalet wurde mit viel Herzblut gestaltet. Die vier Feriendomizile verbinden alpinen Charakter mit modernem Komfort und einer besonders familienfreundlichen Ausstattung.</div>
+</section>
+
+<div class="label">Einblicke</div>
+<section class="gallery">
+<img class="big" src="https://www.alpenwelt-karwendel.de/images/iqkebw7k_kw-/chalet-2-wohn-esszimmer.jpg" alt="Wohnbereich Alpine Chalet">
+<img src="https://www.alpenwelt-karwendel.de/images/ybw857psr24-/chalet-1-bad.jpg" alt="Wellnessbad mit Sauna">
+<img src="https://www.alpenwelt-karwendel.de/images/tfynv3rfn6m-/chalet-4-wz-ez.jpg" alt="Wohnzimmer Alpine Chalet">
+</section>
+
+<div class="label">Die vier Chalets</div>
+<section class="units">
+<div class="unit"><small>Chalet 1</small><strong>134 m²</strong><span>3 Schlafzimmer, Whirlpool, Sauna, 2 Balkone</span></div>
+<div class="unit"><small>Chalet 2</small><strong>84 m²</strong><span>2 Schlafzimmer, Wellnessbad, Sauna, Balkon</span></div>
+<div class="unit"><small>Chalet 3</small><strong>123 m²</strong><span>3 Schlafzimmer, Sauna, 2 große Balkone</span></div>
+<div class="unit"><small>Chalet 4</small><strong>130 m²</strong><span>3 Schlafzimmer, Sauna, Garten und Terrasse</span></div>
+</section>
+
+<div class="label">Kontakt</div>
+<section class="card">
+<div class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s6.5-5.2 6.5-11.5a6.5 6.5 0 1 0-13 0C5.5 15.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.2" stroke="currentColor" stroke-width="1.8"/></svg></span><div><small>Adresse</small><a href="https://www.google.com/maps/search/?api=1&query=Alpine%20Chalet%20Mittenwalder%20Str.%2017%2082499%20Wallgau" target="_blank" rel="noopener">Mittenwalder Str. 17<br>82499 Wallgau</a></div></div>
+<div class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none"><path d="M7.2 3.8 10 7.2 8.2 9.6c1.4 2.8 3.4 4.8 6.2 6.2l2.4-1.8 3.4 2.8c.5.4.6 1.2.2 1.7-.8 1-2 1.7-3.4 1.7-6.4 0-13.2-6.8-13.2-13.2 0-1.4.7-2.6 1.7-3.4.5-.4 1.3-.3 1.7.2Z" stroke="currentColor" stroke-width="1.7"/></svg></span><div><small>Telefon</small><a href="tel:+4988259217770">08825 9217770</a></div></div>
+<div class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="m5 7 7 5 7-5" stroke="currentColor" stroke-width="1.8"/></svg></span><div><small>E Mail</small><a href="mailto:welcome@alpine-chalet.de">welcome@alpine-chalet.de</a></div></div>
+<div class="actions"><a class="action" href="tel:+4988259217770">Anrufen</a><a class="action dark" href="mailto:welcome@alpine-chalet.de">E Mail</a></div>
+</section>
+
+<div class="label">Highlights</div>
+<section class="chips">
+<span class="chip">Sauna</span>
+<span class="chip">Wellnessbad</span>
+<span class="chip">Bergblick</span>
+<span class="chip">Familienfreundlich</span>
+<span class="chip">WLAN</span>
+<span class="chip">Parkplatz</span>
+<span class="chip">Zentrale Lage</span>
+<span class="chip">Haustiere auf Anfrage</span>
+</section>
+
+<footer><b>Alpine Chalet</b><br>Mittenwalder Str. 17, 82499 Wallgau<br>Alpenwelt Karwendel</footer>
+</main>
+</body>
+</html>
